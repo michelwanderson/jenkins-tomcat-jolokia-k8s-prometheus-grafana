@@ -36,7 +36,7 @@ git clone https://github.com/michelwanderson/jenkins-tomcat-jolokia-k8s-promethe
 ### 2. Baixe o arquivo jenkins.war
 
 ```bash
-wget -O docker/jenkins.war https://get.jenkins.io/war/2.440/jenkins.war`
+wget -O docker/jenkins.war https://get.jenkins.io/war/2.440/jenkins.war
 ```
 ### 3. Construa a imagem Docker
 ```bash
