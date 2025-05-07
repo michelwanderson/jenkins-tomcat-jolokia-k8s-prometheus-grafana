@@ -92,7 +92,7 @@ curl http://localhost:8080/jolokia/read/java.lang:type=Memory`
     
 3.  Adicione o Prometheus como Data Source (`http://prometheus-service:9090`)
     
-4.  Crie ou importe um dashboard para visualizar métricas de memória, GC, threads, etc.
+4.  Crie ou importe um dashboard para visualizar métricas de memória, threads, etc.
 
 ## 🌟 Features
 
