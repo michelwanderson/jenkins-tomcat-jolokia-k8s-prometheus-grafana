@@ -90,7 +90,7 @@ curl http://localhost:8080/jolokia/read/java.lang:type=Memory`
     
 2.  Faça login (admin / admin)
     
-3.  Adicione o Prometheus como Data Source (`http://prometheus-service:9090`)
+3.  Pode se adicionar o Prometheus como Data Source (`http://prometheus-service:9090`)
     
 4.  Crie ou importe um dashboard para visualizar métricas de memória, threads, etc.
 
