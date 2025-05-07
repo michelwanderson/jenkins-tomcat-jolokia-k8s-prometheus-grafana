@@ -56,17 +56,15 @@ kind load docker-image k8s-jenkins-tomcat-jolokia-prometheus --name "cluster-jen
 ```bash
 kubectl apply -f deploy.yaml # Jenkins + Jolokia 
 kubectl apply -f prometheus/config-map.yaml
-kubectl apply -f prometheus/deployment.yaml
-kubectl apply -f prometheus/service.yaml
-kubectl apply -f grafana/deployment.yaml
-kubectl apply -f grafana/service.yaml
+kubectl apply -f prometheus/deploy.yaml
+kubectl apply -f grafana/deploy.yaml
 ```
 
 ## 🌐 Acessos
 Realize o mapeamento de portas para acesso local via navegador:
 ```bash
-kubectl port-forward svc/jenkins-tomcat-jolokia 8080:8080
-kubectl port-forward svc/prometheus-service 9090:9090
+kubectl port-forward svc/jenkins-tomcat-jolokia 8080:8080&\
+kubectl port-forward svc/prometheus-service 9090:9090&\
 kubectl port-forward svc/grafana-service 3000:3000
 ```
 -   **Jenkins Web:** [http://localhost:8080/jenkins](http://localhost:8080/jenkins)
