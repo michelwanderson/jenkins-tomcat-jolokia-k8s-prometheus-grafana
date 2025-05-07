@@ -49,7 +49,7 @@ kind create cluster --config config.yaml --name "cluster-jenkins-tomcat-jolokia-
 
 ### 5. Carregue a imagem no KIND
 ```bash
-kind load docker-image k8s-jenkins-tomcat-jolokia-prometheus --name cluster-jenkins-tomcat-jolokia-prometheus
+kind load docker-image k8s-jenkins-tomcat-jolokia-prometheus --name "cluster-jenkins-tomcat-jolokia-prometheus"
 ```
 
 ### 6. Aplique os manifests no Kubernetes
