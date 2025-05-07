@@ -64,9 +64,11 @@ kubectl apply -f grafana/service.yaml
 
 ## 🌐 Acessos
 Realize o mapeamento de portas para acesso local via navegador:
-`kubectl port-forward svc/jenkins-tomcat-jolokia 8080:8080`
-`kubectl port-forward svc/prometheus-service 9090:9090`
-`kubectl port-forward svc/grafana-service 3000:3000`
+```bash
+kubectl port-forward svc/jenkins-tomcat-jolokia 8080:8080
+kubectl port-forward svc/prometheus-service 9090:9090
+kubectl port-forward svc/grafana-service 3000:3000
+```
 -   **Jenkins Web:** [http://localhost:8080/jenkins](http://localhost:8080/jenkins)
     
 -   **Jolokia API:** [http://localhost:8080/jolokia](http://localhost:8080/jolokia)
