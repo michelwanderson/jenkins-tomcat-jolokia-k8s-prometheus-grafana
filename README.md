@@ -46,15 +46,19 @@ docker build -t k8s-jenkins-tomcat-jolokia-prometheus docker/.
 `kind create cluster --config config.yaml --name "cluster-jenkins-tomcat-jolokia"` 
 
 ### 5. Carregue a imagem no KIND
-`kind load docker-image k8s-jenkins-tomcat-jolokia-prometheus --name cluster-jenkins-tomcat-jolokia-prometheus` 
+```bash
+kind load docker-image k8s-jenkins-tomcat-jolokia-prometheus --name cluster-jenkins-tomcat-jolokia-prometheus
+```
 
 ### 6. Aplique os manifests no Kubernetes
-`kubectl apply -f deploy.yaml # Jenkins + Jolokia 
+```bash
+kubectl apply -f deploy.yaml # Jenkins + Jolokia 
 kubectl apply -f prometheus/config-map.yaml
 kubectl apply -f prometheus/deployment.yaml
 kubectl apply -f prometheus/service.yaml
 kubectl apply -f grafana/deployment.yaml
-kubectl apply -f grafana/service.yaml`
+kubectl apply -f grafana/service.yaml
+```
 
 ## 🌐 Acessos
 Realize o mapeamento de portas para acesso local via navegador:
