@@ -44,7 +44,7 @@ docker build -t k8s-jenkins-tomcat-jolokia-prometheus docker/.
 ```
 ### 4. Crie o cluster com KIND
 ```bash
-kind create cluster --config config.yaml --name "cluster-jenkins-tomcat-jolokia"
+kind create cluster --config config.yaml --name "cluster-jenkins-tomcat-jolokia-prometheus"
 ````
 
 ### 5. Carregue a imagem no KIND
