@@ -114,7 +114,7 @@ curl http://localhost:8080/jolokia/read/java.lang:type=Memory`
 ## 🗂️ Estrutura do projeto
 
 ```arduino
-jenkins-tomcat-jolokia-k8s-prometheus-grafana
+jenkins-tomcat-jolokia-k8s-prometheus-grafana/
 ├── README.md
 ├── config.yaml
 ├── deploy.yaml
