@@ -1,0 +1,23 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: Cluster
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 30000  # Grafana
+        hostPort: 30000
+        protocol: TCP
+      - containerPort: 30001  # Prometheus
+        hostPort: 30001
+        protocol: TCP
+      - containerPort: 8080  # Jenkins/Jolokia
+        hostPort: 8080
+        protocol: TCP
+  - role: worker
+  - role: worker
+containerdConfigPatches:
+  - |
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:5000"]
+      endpoint = ["http://localhost:5000"]
+      
+

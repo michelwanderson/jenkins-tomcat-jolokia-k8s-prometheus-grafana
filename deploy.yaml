@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-tomcat-jolokia
+spec:
+  selector:
+    matchLabels:
+      app: jtj
+  template:
+    metadata:
+      labels:
+        app: jtj
+    spec:
+      containers:
+      - name: jenkins-tomcat-jolokia
+        image: k8s-jenkins-tomcat-jolokia-prometheus
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-tomcat-jolokia
+spec:
+  selector:
+    app: jtj
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
